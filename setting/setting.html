@@ -1,0 +1,68 @@
+﻿<!doctype html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>串流設定</title>
+  <style>
+    table{border-collapse:collapse;}td,th{border:1px solid #ccc;padding:8px;}
+    .button-link {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      background-color: #007bff;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+
+    .button-link:hover {
+      background-color: #0056b3;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      transform: translateY(-2px);
+    }
+
+  </style>
+</head>
+<body>
+  <h1><a href="/" target="_blank" class="button-link">播放頁面</a></h1>
+
+  <h1>廣播清單</h1>
+  <table>
+    <tr><th>名稱</th><th>URL</th><th>動作</th><th>選擇</th></tr>
+    {% for stream in streams %}
+    <tr>
+      <td>{{ stream.name }}</td>
+      <td>{{ stream.url }}</td>
+      <td>
+        <form style="display:inline;" method="post" action="{{ url_for('edit_stream') }}">
+          <input type="hidden" name="old_url" value="{{ stream.url }}">
+          <input type="text" name="new_name" value="{{ stream.name }}" placeholder="新名稱">
+          <input type="text" name="new_url" value="{{ stream.url }}" placeholder="新 URL">
+          <button type="submit">修改</button>
+        </form>
+        <form style="display:inline;" method="post" action="{{ url_for('delete_stream') }}">
+          <input type="hidden" name="url" value="{{ stream.url }}">
+          <button type="submit">刪除</button>
+        </form>
+      </td>
+      <td>
+        <form method="post" action="{{ url_for('select_stream') }}">
+          <input type="hidden" name="url" value="{{ stream.url }}">
+          <input type="radio" name="selected" onchange="this.form.submit()" {% if stream.url==active %}checked{% endif %}>
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  <h2>新增串流</h2>
+  <form method="post" action="{{ url_for('add_stream') }}">
+    <input type="text" name="name" placeholder="廣播名稱" required>
+    <input type="text" name="url" placeholder="M3U8 URL" required style="width:400px;">
+    <button type="submit">新增</button>
+  </form>
+
+</body>
+</html>

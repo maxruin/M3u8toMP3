@@ -1,23 +1,27 @@
 [
   {
     "name": "BestRadio 台中好事 903",
-    "url": "https://bestradiow-hichannel.cdn.hinet.net/live/RA000010/playlist.m3u8?token=fDX0M1MvHo0aHtvmT7GJmg&expires=1745818781"
+    "url": "https://bestradiow-hichannel.cdn.hinet.net/live/RA000010/playlist.m3u8?token=ozl8XxGOs0et9YfSL9fikg&expires=1745911767"
   },
   {
     "name": "BestRadio 台北好事 989",
-    "url": "https://bestradiow-hichannel.cdn.hinet.net/live/RA000013/playlist.m3u8?token=Jiwj9MDmWY6addeofrwgCg&expires=1745818781"
+    "url": "https://bestradiow-hichannel.cdn.hinet.net/live/RA000013/playlist.m3u8?token=thUeScxFw2DAePGz8ehQeQ&expires=1745911767"
   },
   {
     "name": "HitFM 北部",
-    "url": "https://hitoradioweb-hichannel.cdn.hinet.net/live/RA000036/playlist.m3u8?token1=VMHv8HQISqbbaAYL19729w&token2=T7i_8drLx0dr5nf2GOXXDA&expire1=1745732680&expire2=1745753980"
+    "url": "https://hitoradioweb-hichannel.cdn.hinet.net/live/RA000036/playlist.m3u8?token1=0Bsy5wRSdBbu2LZOCwqXRw&token2=szEMsGLsN_UgwAG80pV3bQ&expire1=1745825667&expire2=1745846967"
   },
   {
     "name": "HitFM 中部",
-    "url": "https://hitoradioweb-hichannel.cdn.hinet.net/live/RA000035/playlist.m3u8?token1=_8CDVUtE3-i6Jfc5Z9IlVg&token2=YrRiFB4aPlaHEp6KglDgxQ&expire1=1745732680&expire2=1745753980"
+    "url": "https://hitoradioweb-hichannel.cdn.hinet.net/live/RA000035/playlist.m3u8?token1=O6YurHgkRpqXJwVAo3slfw&token2=fb2xkJXEbn_wsEHzIo6AUA&expire1=1745825667&expire2=1745846967"
   },
   {
     "name": "中廣音樂網 i radio",
     "url": "https://n12.rcs.revma.com/ks4vsmg3qtzuv?rj-ttl=5"
+  },
+  {
+    "name": "Kiss",
+    "url": "https://kissradiow-hichannel.cdn.hinet.net/live/RA000040/playlist.m3u8?token=ix0yht3Y-ysP_Xxxl56nAA&expires=1745912968"
   },
   {
     "name": "全國廣播",
@@ -34,10 +38,6 @@
   {
     "name": "ICRT",
     "url": "https://stream.rcs.revma.com/nkdfurztxp3vv"
-  },
-  {
-    "name": "Kiss",
-    "url": "https://kissradiow-hichannel.cdn.hinet.net/live/RA000040/playlist.m3u8?token=cr9zLMXqea96VQu3j_dPFA&expires=1745819981"
   },
   {
     "name": "BigBRadio 音樂電台Jpop類型",

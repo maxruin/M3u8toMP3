@@ -25,10 +25,13 @@ active_url = streams[0]['url'] if streams else None
 
 
 app = Flask(__name__)
-@app.route('/')
-def audio_feed():
+@app.route('/<int:channel>')
+def audio_feed(channel):
     global active_url
     url = active_url or (streams[0]['url'] if streams else None)
+    if channel != 0 and channel <= len(streams):
+        url = streams[channel-1]['url']
+        
     if not url:
         return "<p>尚未設定任何串流，請先在 <a href='/settings.html'>設定頁面</a> 新增。</p>", 400
 
@@ -38,7 +41,8 @@ def audio_feed():
         if s.get('url') == url:
             active_name = s.get('name')
             break
-
+    
+    print(f"正在播放：{active_name} ({url})")
     # 建構 ffmpeg cmd
     cmd = ["ffmpeg", "-re"]
     # 如果名稱在 PERSISTENT_NAMES，加入 http_persistent 參數

@@ -26,13 +26,20 @@
   </style>
 </head>
 <body>
-  <h1><a href="/" target="_blank" class="button-link">播放頁面</a></h1>
+  <h1><a href="/0" target="_blank" class="button-link">播放頁面</a></h1>
 
   <h1>廣播清單</h1>
   <table>
-    <tr><th>名稱</th><th>URL</th><th>動作</th><th>選擇</th></tr>
+    <tr>
+      <th>頻道</th>
+      <th>名稱</th>
+      <th>URL</th>
+      <th>動作</th>
+      <th>選擇</th>
+    </tr>
     {% for stream in streams %}
     <tr>
+      <td><a href="/{{ loop.index }}" target="_blank" class="button-link">{{ loop.index }}</a></td>
       <td>{{ stream.name }}</td>
       <td>{{ stream.url }}</td>
       <td>

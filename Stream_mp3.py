@@ -27,7 +27,12 @@ active_url = streams[0]['url'] if streams else None
 app = Flask(__name__)
 @app.route('/<int:channel>')
 def audio_feed(channel):
+    """
+    播放音訊串流，根據 channel 參數選擇串流
+    """
     global active_url
+
+    # 取得當前播放的 URL
     url = active_url or (streams[0]['url'] if streams else None)
     if channel != 0 and channel <= len(streams):
         url = streams[channel-1]['url']

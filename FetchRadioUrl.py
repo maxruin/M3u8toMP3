@@ -1,6 +1,7 @@
 import requests, re
 import StreamList as sl
 import utils.HttpUtil as httpUtil
+import json
 
 # 廣播列表
 streams = sl.load_streams()
@@ -84,12 +85,28 @@ def fetch_kiss_radio_url():
         print(f"Fetch {name} 失敗: {e}")
     return None
 
+# 中廣音樂網 i radio 最新串流 URL
+def fetch_i_radio_url():
+    try:
+        name = '中廣音樂網 i radio'
+        data = httpUtil.get_cffi('https://api.instant.audio/data/streams/142/i-bcc-music-network')
+        url = data.get('result').get('streams')[1].get('url')
+        if url:
+            print(f"{name} 最新串流 URL: {url}")
+            return url
+        else:
+            print("無法找到 {name} 最新串流 URL")
+    except Exception as e:
+        print(f"Fetch {name} 失敗: {e}")
+    return None
+
 def fetch_all():
     update_streams(fetch_best_radio_url('1'), 'BestRadio 台北好事 989')
     update_streams(fetch_best_radio_url('2'), 'BestRadio 台中好事 903')
     update_streams(fetch_hit_radio_url('1'), 'HitFM 北部')
     update_streams(fetch_hit_radio_url('2'), 'HitFM 中部')
     update_streams(fetch_kiss_radio_url(), 'Kiss')
+    update_streams(fetch_i_radio_url(), '中廣音樂網 i radio')
 
 
 if __name__ == "__main__":

@@ -1,7 +1,6 @@
 import requests, re
 import StreamList as sl
 import utils.HttpUtil as httpUtil
-import json
 
 # 廣播列表
 streams = sl.load_streams()

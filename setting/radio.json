@@ -1,19 +1,19 @@
 [
   {
     "name": "BestRadio 台中好事 903",
-    "url": "https://bestradiow-hichannel.cdn.hinet.net/live/RA000010/playlist.m3u8?token=w1vl3c9TOVl81PFj_cQ8wA&expires=1745993920"
+    "url": "https://bestradiow-hichannel.cdn.hinet.net/live/RA000010/playlist.m3u8?token=HZ5xnGeoWxM8KsgTJslV7A&expires=1746002597"
   },
   {
     "name": "BestRadio 台北好事 989",
-    "url": "https://bestradiow-hichannel.cdn.hinet.net/live/RA000013/playlist.m3u8?token=y3PA7zZo1EL1rm0VdOAM3A&expires=1745993920"
+    "url": "https://bestradiow-hichannel.cdn.hinet.net/live/RA000013/playlist.m3u8?token=2oL8w2mksWyxSFN617HYpw&expires=1746002596"
   },
   {
     "name": "HitFM 北部",
-    "url": "https://hitoradioweb-hichannel.cdn.hinet.net/live/RA000036/playlist.m3u8?token1=9Vu11GOS3ke_W0536wF7FQ&token2=dcd-EhCm3ixefRWvLoImuw&expire1=1745907820&expire2=1745929120"
+    "url": "https://hitoradioweb-hichannel.cdn.hinet.net/live/RA000036/playlist.m3u8?token1=bAPrwk2EIi4SWeljYrKGXQ&token2=0rmKP2PIDKViBIYuKHWAbw&expire1=1745916496&expire2=1745937796"
   },
   {
     "name": "HitFM 中部",
-    "url": "https://hitoradioweb-hichannel.cdn.hinet.net/live/RA000035/playlist.m3u8?token1=HoG5s7qb5vQrWZjui6NjIQ&token2=2LI-7p35zF4uo3lKRv_AoQ&expire1=1745907820&expire2=1745929120"
+    "url": "https://hitoradioweb-hichannel.cdn.hinet.net/live/RA000035/playlist.m3u8?token1=bf7ctHcLYZh1xHU46XXSBQ&token2=l4dufBSRsCBjLDFWQTrsWg&expire1=1745916496&expire2=1745937796"
   },
   {
     "name": "中廣音樂網 i radio",
@@ -21,7 +21,7 @@
   },
   {
     "name": "Kiss",
-    "url": "https://kissradiow-hichannel.cdn.hinet.net/live/RA000040/playlist.m3u8?token=ugcZvvxRfbV2IESZF7bLIA&expires=1745995120"
+    "url": "https://kissradiow-hichannel.cdn.hinet.net/live/RA000040/playlist.m3u8?token=RcaSfuJkUZwVKwTgL-WnhQ&expires=1746003751"
   },
   {
     "name": "全國廣播",
@@ -41,10 +41,10 @@
   },
   {
     "name": "BigBRadio 音樂電台Jpop類型",
-    "url": "https://antares.dribbcast.com/proxy/jpop?mp=/s"
+    "url": "https://japanimradio.ice.infomaniak.ch/japanimradio.aac"
   },
   {
     "name": "幻想郷ラジオ 動漫音樂電台",
-    "url": "http://stream.gensokyoradio.net:8000/2"
+    "url": "https://stream.gensokyoradio.net/1/"
   }
 ]

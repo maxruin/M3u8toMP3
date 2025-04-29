@@ -66,6 +66,8 @@ def get_tls_client(url):
     """
     使用tls_client發送 GET 請求到指定的 URL
     模擬TLS Fingerprinting
+    需要打包tls-client-64.dll，在spec加入以下內容：
+    datas=[('C:\\Users\\Max\\AppData\\Roaming\\Python\\Python312\\site-packages\\tls_client\\dependencies\\tls-client-64.dll', 'tls_client/dependencies')],
     """
 
     try:

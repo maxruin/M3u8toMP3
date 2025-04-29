@@ -13,7 +13,6 @@ TEMPLATE_FILE = 'setting/setting.html'
 # 若 stream name 在此列表中，啟用 HTTP 持久連線
 PERSISTENT_NAMES = [
     'BestRadio 台中好事 903',
-    # 可在此添加其他名稱
 ]
 
 # 抓取最新串流 URL
@@ -30,7 +29,7 @@ def audio_feed(channel):
     """
     播放音訊串流，根據 channel 參數選擇串流
     """
-    global active_url
+    global active_url, streams
 
     # 取得當前播放的 URL
     url = active_url or (streams[0]['url'] if streams else None)
@@ -46,7 +45,21 @@ def audio_feed(channel):
         if s.get('url') == url:
             active_name = s.get('name')
             break
-    
+
+    # 重新抓取url
+    new_url = None
+    if active_name == 'HitFM 北部':
+        new_url = fetch.fetch_hit_radio_url('1')
+    elif active_name == 'HitFM 中部':
+        new_url = fetch.fetch_hit_radio_url('2')
+    if new_url:
+        # 更新串流 URL
+        fetch.update_streams(new_url, active_name)
+        # 廣播列表
+        streams = sl.load_streams()
+        # 更新當前播放的 URL
+        url = new_url
+
     print(f"正在播放：{active_name} ({url})")
     # 建構 ffmpeg cmd
     cmd = ["ffmpeg", "-re"]

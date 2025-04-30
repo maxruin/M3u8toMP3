@@ -93,7 +93,6 @@ def audio_feed(channel):
         # 低延遲模式：不額外緩衝、直接寫入
         "-fflags", "nobuffer+genpts",
         "-flags", "low_delay",
-        "-avioflags", "direct",
 
         # 使用牆時鐘作為時間戳，讓重連時 pts 連續
         "-use_wallclock_as_timestamps", "1",

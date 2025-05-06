@@ -3,3 +3,4 @@ __pycache__
 /build/
 /dist/
 /Stream_mp3.exe
+/ffmpeg.exe

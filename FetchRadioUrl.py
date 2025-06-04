@@ -41,7 +41,7 @@ def fetch_best_radio_url(channel):
             print(f"{name} 最新串流 URL: {new_url}")
             return new_url
         else:
-            print("無法找到 {name} 最新串流 URL")
+            print(f"無法找到 {name} 最新串流 URL")
     except Exception as e:
         print(f"Fetch {name} 失敗: {e}")
     return None
@@ -61,7 +61,7 @@ def fetch_hit_radio_url(channel):
             print(f"{name} 最新串流 URL: {new_url}")
             return new_url
         else:
-            print("無法找到 {name} 最新串流 URL")
+            print(f"無法找到 {name} 最新串流 URL")
     except Exception as e:
         print(f"Fetch {name} 失敗: {e}")
     return None
@@ -79,7 +79,7 @@ def fetch_kiss_radio_url():
             print(f"{name} 最新串流 URL: {new_url}")
             return new_url
         else:
-            print("無法找到 {name} 最新串流 URL")
+            print(f"無法找到 {name} 最新串流 URL")
     except Exception as e:
         print(f"Fetch {name} 失敗: {e}")
     return None
@@ -94,7 +94,7 @@ def fetch_i_radio_url():
             print(f"{name} 最新串流 URL: {url}")
             return url
         else:
-            print("無法找到 {name} 最新串流 URL")
+            print(f"無法找到 {name} 最新串流 URL")
     except Exception as e:
         print(f"Fetch {name} 失敗: {e}")
     return None
